@@ -45,7 +45,7 @@ private:
   void _UpdateFreq(UINT ch);
   void _UpdateProgram(UINT ch);
   void _WriteReg(BYTE reg, BYTE val, INT pan=-1);
-  void CSccDevice::_CalcEnvelope(void);
+  void _CalcEnvelope(void);
 public:
   CSccDevice(DWORD rate=44100, UINT nch=2);
   virtual ~CSccDevice();

@@ -26,7 +26,7 @@ CEnvelope::~CEnvelope() {
   delete [] m_ci;
 }
 
-void CEnvelope::Reset(DWORD clock, DWORD rate) {
+void CEnvelope::Reset(UINT32 clock, UINT32 rate) {
   m_rate = rate;
   m_clock = clock;
   m_cnt = 0;

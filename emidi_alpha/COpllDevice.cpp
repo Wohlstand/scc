@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <math.h>
+#include <string.h>
 #include "COpllDevice.hpp"
 
 #if defined (_MSC_VER)

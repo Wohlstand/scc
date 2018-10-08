@@ -427,7 +427,7 @@ write_enhanced (SCC * scc, e_uint32 adr, e_uint32 val)
   }
 }
 
-INLINE static
+INLINE static int
 BFFE_write (SCC * scc, e_uint32 adr, e_uint32 val)
 {
   if ((adr & 0xFFFE) == 0xBFFE)

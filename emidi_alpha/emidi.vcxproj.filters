@@ -48,7 +48,7 @@
     <ClCompile Include="device\emu2413.c">
       <Filter>devices</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="main_winmm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

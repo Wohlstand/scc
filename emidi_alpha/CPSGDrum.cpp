@@ -1,4 +1,5 @@
 #include <math.h>
+#include <string.h>
 #include "CPSGDrum.hpp"
 
 using namespace dsa;
@@ -30,6 +31,9 @@ CPSGDrum::CPSGDrum(DWORD rate, UINT nch) : m_env(6) {
   inst_table[38] = inst_table[40] = inst_table[1];
 }
 
+CPSGDrum::~CPSGDrum()
+{}
+
 RESULT CPSGDrum::Reset() {
 
   for(UINT i=0;i<2; i++) {
@@ -51,7 +55,7 @@ RESULT CPSGDrum::Reset() {
     m_off_channels.push_back(i);
   }
 
-  for(i=0; i<128; i++) {
+  for(int i=0; i<128; i++) {
     m_keytable[i]=-1;
     m_velocity[i]=127;
   }

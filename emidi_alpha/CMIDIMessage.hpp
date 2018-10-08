@@ -1,6 +1,7 @@
 #ifndef __MIDI_MESSAGE_HPP__
 #define __MIDI_MESSAGE_HPP__
 #include <string>
+#include <string.h>
 #include <deque>
 
 #include "DsaCommon.hpp"

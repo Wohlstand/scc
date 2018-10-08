@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <limits.h>
 #include "CSMFPlay.hpp"
 #include "COpllDevice.hpp"
 #include "CSccDevice.hpp"

@@ -1,4 +1,6 @@
 #include <math.h>
+#include <limits.h>
+#include <string.h>
 #include "CSccDevice.hpp"
 
 #if defined (_MSC_VER)

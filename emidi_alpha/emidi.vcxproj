@@ -94,7 +94,7 @@
     <ClCompile Include="CSccDevice.cpp" />
     <ClCompile Include="CSMF.cpp" />
     <ClCompile Include="CSMFPlay.cpp" />
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="main_winmm.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>

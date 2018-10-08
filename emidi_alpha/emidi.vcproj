@@ -251,7 +251,7 @@
 				>
 			</File>
 			<File
-				RelativePath="main.cpp"
+				RelativePath="main_winmm.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
