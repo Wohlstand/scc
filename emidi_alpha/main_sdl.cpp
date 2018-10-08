@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include "CSMFPlay.hpp"
 
-static const int nch = 2;
-static const int buffer_size = 4096;
+enum { nch = 2 };
+enum { buffer_size = 4096 };
 static int buf[buffer_size * nch];
 
 /* variable declarations */
@@ -65,10 +65,11 @@ int main(int argc, char *argv[])
     if(SDL_Init(SDL_INIT_AUDIO) < 0)
         return 1;
 
+    memset(&spec, 0, sizeof(SDL_AudioSpec));
     spec.freq = 44100;
     spec.format = AUDIO_S16SYS;
     spec.channels = 2;
-    spec.samples = buffer_size * nch;
+    spec.samples = buffer_size;
 
     /* set the callback function */
     spec.callback = my_audio_callback;
