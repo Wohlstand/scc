@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     mp.p = new dsa::CSMFPlay(44100, 8);
 
     if(argc<=1) {
-        printf("mp.p filename.mid\n");
+        printf("%s filename.mid\n", argv[0]);
         return 0;
     }
 
