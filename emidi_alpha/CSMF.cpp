@@ -45,7 +45,7 @@ bool CSMF::Load(const char *data, DWORD data_length)
 
   if(data_length<14) return false;
 
-  // Mac binary ‘Îô
+  // Mac binary å¯¾ç­–
   /*
   while (1) {
     if(strncmp("MThd",data+idx,4)==0) break;

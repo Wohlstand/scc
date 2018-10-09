@@ -12,7 +12,7 @@
 using namespace dsa;
 using namespace dsa::C;
 
-// GM‰¹Fƒ}ƒbƒv
+// GMéŸ³è‰²ãƒãƒƒãƒ—
 static BYTE program_table[128] =
 {
    3, 3, 3, 3, 3, 3,11,11, //000- PIANO 
@@ -33,7 +33,7 @@ static BYTE program_table[128] =
    5, 5, 5, 5, 5, 5, 5, 5  //120- SFX
 };
 
-// ‰¹F•Ê‚Ì‰¹—Ê·’²® -n ‰¹—ÊƒAƒbƒv +n ‰¹—Êƒ_ƒEƒ“
+// éŸ³è‰²åˆ¥ã®éŸ³é‡å·®èª¿æ•´ -n éŸ³é‡ã‚¢ãƒƒãƒ— +n éŸ³é‡ãƒ€ã‚¦ãƒ³
 static int prog_att[16] = { 
  -1, // 0 org
  -2, // 1 violin

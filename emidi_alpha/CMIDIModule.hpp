@@ -20,11 +20,11 @@ private:
   int m_pan[16];
   int m_bend[16];
   int m_drum[16];
-  // ‚»‚ÌƒL[‚ğ”­‰¹‚µ‚Ä‚¢‚éƒ`ƒƒƒ“ƒlƒ‹”Ô†‚ğŠi”[‚·‚é”z—ñ
+  // ãã®ã‚­ãƒ¼ã‚’ç™ºéŸ³ã—ã¦ã„ã‚‹ãƒãƒ£ãƒ³ãƒãƒ«ç•ªå·ã‚’æ ¼ç´ã™ã‚‹é…åˆ—
   int m_keyon_table[16][128];
-  // MIDIƒ`ƒƒƒ“ƒlƒ‹‚Åg—p‚µ‚Ä‚¢‚éOPLLƒ`ƒƒƒ“ƒlƒ‹‚ÌW‡(”­‰¹‡‚ÌƒLƒ…[j
+  // MIDIãƒãƒ£ãƒ³ãƒãƒ«ã§ä½¿ç”¨ã—ã¦ã„ã‚‹OPLLãƒãƒ£ãƒ³ãƒãƒ«ã®é›†åˆ(ç™ºéŸ³é †ã®ã‚­ãƒ¥ãƒ¼ï¼‰
   std::deque<KeyInfo> m_used_channels[16];
-  // ƒL[ƒIƒt‚µ‚Ä‚¢‚éOPLLƒ`ƒƒƒ“ƒlƒ‹‚ÌW‡
+  // ã‚­ãƒ¼ã‚ªãƒ•ã—ã¦ã„ã‚‹OPLLãƒãƒ£ãƒ³ãƒãƒ«ã®é›†åˆ
   std::deque<KeyInfo> m_off_channels; 
   // The current entry value of RPN/NRPN
   // NRPN=1, RPN=0;
@@ -57,9 +57,9 @@ public:
   void AttachDevice(ISoundDevice *device){ m_device = device; }
   ISoundDevice *DetachDevice(){ ISoundDevice *tmp=m_device; m_device = NULL; return tmp; }
   RESULT Reset();
-// CMIDIƒƒbƒZ[ƒWŒ`®‚ÌMIDIƒƒbƒZ[ƒW‚ğˆ—‚·‚éB
+// CMIDIãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å½¢å¼ã®MIDIãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ã€‚
   RESULT SendMIDIMsg(const CMIDIMsg &mes);
-// ‰¹º‚ÌƒŒƒ“ƒ_ƒŠƒ“ƒO‚ğs‚¤B
+// éŸ³å£°ã®ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã‚’è¡Œã†ã€‚
   RESULT Render(INT32 buf[2]);
 
   RESULT SetDrumChannel(int midi_ch, int enable);

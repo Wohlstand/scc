@@ -97,13 +97,13 @@ void CMIDIModule::NoteOn(BYTE midi_ch, BYTE note, BYTE velo) {
     return;
   }
   
-  if(0<=m_keyon_table[midi_ch][note]) return; //ÉLÅ[ÉIÉìíÜÇ»ÇÁñ≥éã
+  if(0<=m_keyon_table[midi_ch][note]) return; //„Ç≠„Éº„Ç™„É≥‰∏≠„Å™„ÇâÁÑ°Ë¶ñ
 
   KeyInfo ki;
 
-  if( m_off_channels.empty() ) { // ÉLÅ[ÉIÉtíÜÇÃÉfÉoÉCÉXÉ`ÉÉÉìÉlÉãÇ™ñ≥Ç¢Ç∆Ç´
+  if( m_off_channels.empty() ) { // „Ç≠„Éº„Ç™„Éï‰∏≠„ÅÆ„Éá„Éê„Ç§„Çπ„ÉÅ„É£„É≥„Éç„É´„ÅåÁÑ°„ÅÑ„Å®„Åç
     ki.dev_ch=-1;
-    for(int i=0;i<16;i++) { // î≠âπêîÇ™ãKíËílÇÊÇËëΩÇ¢MIDIÉ`ÉÉÉìÉlÉãÇè¡âπ
+    for(int i=0;i<16;i++) { // Áô∫Èü≥Êï∞„ÅåË¶èÂÆöÂÄ§„Çà„ÇäÂ§ö„ÅÑMIDI„ÉÅ„É£„É≥„Éç„É´„ÇíÊ∂àÈü≥
       if(m_used_channels[i].size() > 1) {
         ki = m_used_channels[i].front();
         m_device->KeyOff(ki.dev_ch);
@@ -112,7 +112,7 @@ void CMIDIModule::NoteOn(BYTE midi_ch, BYTE note, BYTE velo) {
         break;
       }
     }
-    if(ki.dev_ch==-1) { // ÇæÇﬂÇ»ÇÁÇ«Ç±Ç≈Ç‡Ç¢Ç¢Ç©ÇÁè¡âπ
+    if(ki.dev_ch==-1) { // „Å†„ÇÅ„Å™„Çâ„Å©„Åì„Åß„ÇÇ„ÅÑ„ÅÑ„Åã„ÇâÊ∂àÈü≥
       for(int i=0;i<16;i++) {
         if(!m_used_channels[i].empty()) {
           ki = m_used_channels[i].front();
@@ -124,7 +124,7 @@ void CMIDIModule::NoteOn(BYTE midi_ch, BYTE note, BYTE velo) {
       }
     }
 
-  } else { // ÉLÅ[ÉIÉtíÜÇÃÉ`ÉÉÉìÉlÉãÇ™Ç†ÇÈÇ∆Ç´ÇÕÇªÇÍÇóòóp
+  } else { // „Ç≠„Éº„Ç™„Éï‰∏≠„ÅÆ„ÉÅ„É£„É≥„Éç„É´„Åå„ÅÇ„Çã„Å®„Åç„ÅØ„Åù„Çå„ÇíÂà©Áî®
     ki = m_off_channels.front();
     m_off_channels.pop_front();
     std::deque<KeyInfo>::iterator it;
